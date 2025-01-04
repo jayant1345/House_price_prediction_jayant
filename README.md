@@ -1,5 +1,5 @@
 # Fingertips_ml_projects_no1
-Fingertips Machine learning project
+Fingertips Machine learning project for regression type
 
 <h1>Home Price Prediction & Analysis</h1>
 <br>
@@ -7,7 +7,7 @@ Fingertips Machine learning project
 <br>
 <p>Initially load csv data set into python</p>
 <br>
-<p> step 1 find the missing value ration for each columns   
+<p> first of all find the missing value ration for each columns   
   "Price","Bedroom2","Bathroom","Car","Landsize","BuildingArea","YearBuilt","Lattitude","Longtitude" columns have missing values
   
  <b>num_col=data.select_dtypes(exclude="object")
@@ -20,7 +20,7 @@ so num_col and cat_col are seperated
   
   num_col=pd.DataFrame(imputer.fit_transform(num_col1),columns=num_col.columns)</b>
 <br>
-above listed colummns have more than 10% missing values so using sklearn KNN impurter we impute missing values
+above listed columns have more than 10% missing values so using sklearn KNN impurter we impute missing values
 <br>
 ### capping method using IQR
 <b>def outlier_removal(data,columns):
@@ -82,8 +82,9 @@ using above function removed outliers and capped outliers
     output_result["r2_error"].append(R2)
     print(f"R2 score:--->{R2}")
     print("\n\n")
-    run above loops which return as all models 's train,test,accuracy,MAE,MSE,RMSE,R2_SCORE in dictionary form
-    finally converted dictionary into dataframe for comaparing models and find best model
+run above loops which return as all models 's train,test,accuracy,MAE,MSE,RMSE,R2_SCORE in dictionary form
+
+finally converted dictionary into dataframe for comaparing models and find best model
 </p>
 
 <p> After finding best model using RandomizedSearchCV method hyperparamter tuning done and best model with best parameter has been searched</p>
