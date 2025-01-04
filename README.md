@@ -7,14 +7,16 @@ Fingertips Machine learning project
 <br>
 <p>Initially load csv data set into python</p>
 <br>
-<p> step 1 find the missing value ration for each columns   "Price","Bedroom2","Bathroom","Car","Landsize","BuildingArea","YearBuilt","Lattitude","Longtitude" columns have missing values
+<p> step 1 find the missing value ration for each columns   
+  "Price","Bedroom2","Bathroom","Car","Landsize","BuildingArea","YearBuilt","Lattitude","Longtitude" columns have missing values
   
  <b>num_col=data.select_dtypes(exclude="object")
   cat_col=data.select_dtypes(include="object")</b>
 
 so num_col and cat_col are seperated
 
-  <b>num_col1=pd.DataFrame(num_col)
+  <b>num_col1=pd.DataFrame(num_col) 
+  
   num_col=pd.DataFrame(imputer.fit_transform(num_col1),columns=num_col.columns)</b>
 <br>
 above listed colummns have more than 10% missing values so using sklearn KNN impurter we impute missing values
@@ -37,7 +39,7 @@ above listed colummns have more than 10% missing values so using sklearn KNN imp
     return data</b>
 using above function removed outliers and capped outliers
 
-## for categorical columns Label encoding is done
+# for categorical columns Label encoding is done
 # finaly combined both num_col and cat_col and make dataframe again for machine learning model creation
   
 </p>
@@ -85,4 +87,4 @@ using above function removed outliers and capped outliers
 
 <p> After finding best model using RandomizedSearchCV method hyperparamter tuning done and best model with best parameter has been searched</p>
 
-### detail coding is available in Fingertips_ml_project1.ipynb file
+## detail coding is available in Fingertips_ml_project1.ipynb file
