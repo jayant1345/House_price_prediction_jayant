@@ -11,6 +11,7 @@ Fingertips Machine learning project
   "Price","Bedroom2","Bathroom","Car","Landsize","BuildingArea","YearBuilt","Lattitude","Longtitude" columns have missing values
   
  <b>num_col=data.select_dtypes(exclude="object")
+ 
   cat_col=data.select_dtypes(include="object")</b>
 
 so num_col and cat_col are seperated
